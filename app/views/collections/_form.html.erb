@@ -1,17 +1,40 @@
-<%= simple_form_for(@collection) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.association :user %>
-    <%= f.input :description %>
-    <%= f.input :sold_count %>
-    <%= f.input :shirt_names %>
-    <%= f.input :url %>
-    <%= f.association :shop %>
+<%= form_for @collection, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :title, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :title, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :description, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sold_count, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :sold_count, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :shirt_names, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :shirt_names, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :url, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  collections_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

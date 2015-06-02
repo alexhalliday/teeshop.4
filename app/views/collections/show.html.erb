@@ -1,39 +1,32 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Collection -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Collection %></h1>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @collection.title %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:title) %></dt>
+      <dd><pre class="prettyprint"><%= @collection.title %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:description) %></dt>
+      <dd><pre class="prettyprint"><%= @collection.description %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:sold_count) %></dt>
+      <dd><pre class="prettyprint"><%= @collection.sold_count %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:shirt_names) %></dt>
+      <dd><pre class="prettyprint"><%= @collection.shirt_names %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:url) %></dt>
+      <dd><pre class="prettyprint"><%= @collection.url %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @collection.user %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              collections_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_collection_path(@collection), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              collection_path(@collection),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @collection.description %>
-</p>
-
-<p>
-  <strong>Sold count:</strong>
-  <%= @collection.sold_count %>
-</p>
-
-<p>
-  <strong>Shirt names:</strong>
-  <%= @collection.shirt_names %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @collection.url %>
-</p>
-
-<p>
-  <strong>Shop:</strong>
-  <%= @collection.shop %>
-</p>
-
-<%= link_to 'Edit', edit_collection_path(@collection) %> |
-<%= link_to 'Back', collections_path %>
