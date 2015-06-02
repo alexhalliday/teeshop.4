@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  user_id: 
+  base_url: MyString
+  custom_url: MyString
+  head_inject: MyText
+  body_inject: MyText
+  footer_inject: MyText
+  favicon: MyText
+
+two:
+  title: MyString
+  description: MyText
+  user_id: 
+  base_url: MyString
+  custom_url: MyString
+  head_inject: MyText
+  body_inject: MyText
+  footer_inject: MyText
+  favicon: MyText
