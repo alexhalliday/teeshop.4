@@ -1,0 +1,14 @@
+<%= simple_form_for(@campaign) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :user %>
+    <%= f.input :teespring_campaign_id %>
+    <%= f.input :description %>
+    <%= f.association :collection %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

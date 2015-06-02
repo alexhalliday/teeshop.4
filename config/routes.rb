@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :campaigns
+
   resources :pages
 
   resources :themes
