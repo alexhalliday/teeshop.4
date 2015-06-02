@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @shop.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @shop.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @shop.user %>
+</p>
+
+<p>
+  <strong>Base url:</strong>
+  <%= @shop.base_url %>
+</p>
+
+<p>
+  <strong>Custom url:</strong>
+  <%= @shop.custom_url %>
+</p>
+
+<p>
+  <strong>Head inject:</strong>
+  <%= @shop.head_inject %>
+</p>
+
+<p>
+  <strong>Body inject:</strong>
+  <%= @shop.body_inject %>
+</p>
+
+<p>
+  <strong>Footer inject:</strong>
+  <%= @shop.footer_inject %>
+</p>
+
+<p>
+  <strong>Favicon:</strong>
+  <%= @shop.favicon %>
+</p>
+
+<%= link_to 'Edit', edit_shop_path(@shop) %> |
+<%= link_to 'Back', shops_path %>
