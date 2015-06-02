@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @collection.title %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @collection.user %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @collection.description %>
+</p>
+
+<p>
+  <strong>Sold count:</strong>
+  <%= @collection.sold_count %>
+</p>
+
+<p>
+  <strong>Shirt names:</strong>
+  <%= @collection.shirt_names %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @collection.url %>
+</p>
+
+<p>
+  <strong>Shop:</strong>
+  <%= @collection.shop %>
+</p>
+
+<%= link_to 'Edit', edit_collection_path(@collection) %> |
+<%= link_to 'Back', collections_path %>
