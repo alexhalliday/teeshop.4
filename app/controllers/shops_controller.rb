@@ -29,6 +29,7 @@ class ShopsController < ApplicationController
   # POST /shops.json
   def create
     @shop = Shop.new(shop_params)
+    @shop.user = current_user
 
     respond_to do |format|
       if @shop.save
