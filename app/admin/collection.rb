@@ -1,4 +1,5 @@
 ActiveAdmin.register Collection do
+  permit_params :title, :description, :sold_count, :shirt_names, :url
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
