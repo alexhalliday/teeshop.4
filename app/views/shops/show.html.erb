@@ -1,49 +1,38 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Shop -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Shop %></h1>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @shop.title %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:title) %></dt>
+      <dd><pre class="prettyprint"><%= @shop.title %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:description) %></dt>
+      <dd><pre class="prettyprint"><%= @shop.description %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:base_url) %></dt>
+      <dd><pre class="prettyprint"><%= @shop.base_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:custom_url) %></dt>
+      <dd><pre class="prettyprint"><%= @shop.custom_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:head_inject) %></dt>
+      <dd><pre class="prettyprint"><%= @shop.head_inject %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:body_inject) %></dt>
+      <dd><pre class="prettyprint"><%= @shop.body_inject %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:footer_inject) %></dt>
+      <dd><pre class="prettyprint"><%= @shop.footer_inject %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:favicon) %></dt>
+      <dd><pre class="prettyprint"><%= @shop.favicon %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @shop.description %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              shops_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_shop_path(@shop), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              shop_path(@shop),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @shop.user %>
-</p>
-
-<p>
-  <strong>Base url:</strong>
-  <%= @shop.base_url %>
-</p>
-
-<p>
-  <strong>Custom url:</strong>
-  <%= @shop.custom_url %>
-</p>
-
-<p>
-  <strong>Head inject:</strong>
-  <%= @shop.head_inject %>
-</p>
-
-<p>
-  <strong>Body inject:</strong>
-  <%= @shop.body_inject %>
-</p>
-
-<p>
-  <strong>Footer inject:</strong>
-  <%= @shop.footer_inject %>
-</p>
-
-<p>
-  <strong>Favicon:</strong>
-  <%= @shop.favicon %>
-</p>
-
-<%= link_to 'Edit', edit_shop_path(@shop) %> |
-<%= link_to 'Back', shops_path %>

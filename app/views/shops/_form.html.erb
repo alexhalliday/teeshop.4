@@ -1,19 +1,58 @@
-<%= simple_form_for(@shop) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.association :user %>
-    <%= f.input :base_url %>
-    <%= f.input :custom_url %>
-    <%= f.input :head_inject %>
-    <%= f.input :body_inject %>
-    <%= f.input :footer_inject %>
-    <%= f.input :favicon %>
+<%= form_for @shop, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :title, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :title, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :description, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :base_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :base_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :custom_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :custom_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :head_inject, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :head_inject, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :body_inject, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :body_inject, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :footer_inject, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :footer_inject, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :favicon, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :favicon, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  shops_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
