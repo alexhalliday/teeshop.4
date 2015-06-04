@@ -11,7 +11,7 @@
       <%= f.text_area :body, :class => 'text-field form-control' %>
     </div>
   </div>
-<%= shop_select(:shop_id, :shops_id, Shops.all, :id, :name) %>
+<%= f.select("post", "shop_id", Shop.all {|p| [ p.name, p.id ] }, { }) %>
 
   <div class="form-group">
     <div class='col-md-offset-2 col-md-10'>
