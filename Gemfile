@@ -50,6 +50,10 @@ gem 'omniauth-facebook'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'font-awesome-rails'
+gem 'animate-rails'
+gem 'jquery-slimscroll-rails'
+gem 'liquid-rails'
 
 group :development do
   gem 'better_errors'
