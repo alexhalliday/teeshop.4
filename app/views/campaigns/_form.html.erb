@@ -11,6 +11,12 @@
       <%= f.text_area :description, :class => 'text-field form-control' %>
     </div>
   </div>
+  <div class="form-group">
+    <%= f.label :collection_id, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.collection_select :collection_id, Collection.all, :id, :title, {include_blank: true} %>
+    </div>
+  </div>
 
   <div class="form-group">
     <div class='col-md-offset-2 col-md-10'>

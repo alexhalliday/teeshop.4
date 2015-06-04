@@ -11,6 +11,7 @@
       <th><%= model_class.human_attribute_name(:sold_count) %></th>
       <th><%= model_class.human_attribute_name(:shirt_names) %></th>
       <th><%= model_class.human_attribute_name(:url) %></th>
+      <th><%= model_class.human_attribute_name(:shop_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -24,6 +25,7 @@
         <td><%= collection.sold_count %></td>
         <td><%= collection.shirt_names %></td>
         <td><%= collection.url %></td>
+        <td><%= collection.shop_id %></td>
         <td><%=l collection.created_at, format: :long %></td>
         <td>
           <%= link_to collection_path(collection), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
