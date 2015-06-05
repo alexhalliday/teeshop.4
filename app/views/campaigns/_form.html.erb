@@ -14,7 +14,7 @@
   <div class="form-group">
     <%= f.label :collection_id, :class => 'control-label col-md-2' %>
     <div class="col-md-10">
-      <%= f.collection_select :collection_id, Collection.all, :id, :title, {include_blank: true} %>
+      <%= f.collection_select :collection_id, Collection.where(["user_id = ?",current_user.id]), :id, :title, {include_blank: true} %>
     </div>
   </div>
 
