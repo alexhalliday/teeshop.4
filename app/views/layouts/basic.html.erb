@@ -18,25 +18,17 @@
     <!-- Wrapper-->
     <div id="wrapper">
 
-        <!-- Navigation -->
-        <%= render 'layouts/navigation' %>
-
-        <!-- Page wraper -->
-        <div id="page-wrapper" class="white-bg">
-
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
             <!-- Page wrapper -->
-            <%= render 'layouts/topnavbar' %>
             <%= bootstrap_flash %>
 
             <!-- Main view  -->
             <%= yield %>
 
             <!-- Footer -->
-            <%= render 'layouts/footer' %>
-
+            </div>
         </div>
-        <!-- End page wrapper-->
-
     </div>
     <!-- End wrapper-->
 

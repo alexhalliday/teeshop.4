@@ -9,12 +9,12 @@
 }
 
 .nav > li.active > a {
-  color: white;
+  color: $navy;
 }
 
 .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus {
   background-color: darken($nav-bg, 3%);
-  color: white;
+  color: darken($navy, 10%);
 }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
@@ -160,7 +160,7 @@
 }
 
 .nav-header a {
-  color: #dfe4ed;
+  color: #FFF;
 }
 
 .nav-header .text-muted {

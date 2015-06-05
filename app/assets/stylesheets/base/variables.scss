@@ -2,9 +2,9 @@
 $font-stack: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Basic Colors
-$navy: #1ab394;           // Primary color
-$dark-gray: #c2c2c2;      // Default color
-$blue: #1c84c6;           // Success color
+$navy: #39ACE6;           // Primary color
+$dark-gray: #6C7478;      // Default color
+$blue: #39ACE6;           // Success color
 $lazur: #23c6c8;          // Info color
 $yellow: #f8ac59;         // Warrning color
 $red: #ed5565;            // Danger color
@@ -36,6 +36,7 @@ $boxed-backgound: image-url("patterns/shattered.png");
 $btn-border-radius: 3px;
 
 //Navigation
-$nav-bg: #2f4050;
-$nav-profil-pattern: image-url("patterns/header-profile.png") no-repeat;
-$nav-text-color: #a7b1c2;
+$nav-bg: #fafafa;
+// $nav-profil-pattern: url('patterns/header-profile-skin-1.png');
+$nav-profil-pattern: $blue;
+$nav-text-color: $navy;

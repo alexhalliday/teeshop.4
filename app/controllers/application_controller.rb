@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
 
 
   private
-  
+
   #-> Prelang (user_login:devise)
   def require_user_signed_in
     unless user_signed_in?
@@ -25,10 +25,8 @@ class ApplicationController < ActionController::Base
       # them to the root path.
       if request.env['HTTP_REFERER']
         fallback_redirect = :back
-      elsif defined?(root_path)
-        fallback_redirect = root_path
       else
-        fallback_redirect = "/"
+        fallback_redirect = "/login/"
       end
 
       redirect_to fallback_redirect, flash: {error: "You must be signed in to view this page."}

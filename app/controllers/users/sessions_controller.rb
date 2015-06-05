@@ -1,6 +1,6 @@
 class Users::SessionsController < Devise::SessionsController
   include ApplicationHelper
-
+  layout "basic"
   def create
     super
   end
