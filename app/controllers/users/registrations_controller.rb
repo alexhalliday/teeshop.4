@@ -1,5 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   include ApplicationHelper
+  layout "basic"
 
   def create
     super
