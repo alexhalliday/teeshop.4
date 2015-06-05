@@ -23,11 +23,9 @@ class ApplicationController < ActionController::Base
 
       # If the user came from a page, we can send them back.  Otherwise, send
       # them to the root path.
-      if request.env['HTTP_REFERER']
-        fallback_redirect = :back
-      else
-        fallback_redirect = "/login/"
-      end
+
+      fallback_redirect = "/login/"
+
 
       redirect_to fallback_redirect, flash: {error: "You must be signed in to view this page."}
     end
