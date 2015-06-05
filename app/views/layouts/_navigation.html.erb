@@ -15,7 +15,7 @@
                     <img src="http://teespring-teeshop.s3-website-us-east-1.amazonaws.com/ang/img/logo_60x60.png">
                 </div>
             </li>
-            <li class="<%= 'active' if current_page?('/shops') %>">
+            <li class="<%= 'active' if current_page?('/') %>">
                 <%= link_to "/" do %>
                 <i class="fa fa-globe"></i> <span class="nav-label">Dashboard</span>
                 <% end %>
@@ -36,7 +36,7 @@
                 <% end %>
             </li>
             <li class="<%= 'active' if current_page?('/pages') %>">
-                <%= link_to "/collections" do %>
+                <%= link_to "/pages" do %>
                 <i class="fa fa-list"></i> <span class="nav-label">Pages</span>
                 <% end %>
             </li>
