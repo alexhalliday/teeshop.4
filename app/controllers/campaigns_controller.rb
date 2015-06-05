@@ -8,7 +8,7 @@ class CampaignsController < ApplicationController
   # GET /campaigns
   # GET /campaigns.json
   def index
-    @campaigns = Campaign.all
+    @campaigns = Campaign.where(["user_id = ?",current_user.id])
   end
 
   # GET /campaigns/1

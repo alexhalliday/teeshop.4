@@ -8,7 +8,7 @@ class CollectionsController < ApplicationController
   # GET /collections
   # GET /collections.json
   def index
-    @collections = Collection.all
+    @collections = Collection.where(["user_id = ?",current_user.id])
   end
 
   # GET /collections/1
