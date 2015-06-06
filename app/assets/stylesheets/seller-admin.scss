@@ -1,0 +1,50 @@
+/*
+ *
+ *   INSPINIA - Responsive Admin Theme
+ *   version 2.0
+ *
+*/
+
+// Google Fonts
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&lang=en");
+
+// Bootstra
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// Variables, Mixins
+@import "seller-admin/variables";
+@import "seller-admin/mixins";
+
+// INSPINIA Theme Elements
+@import "seller-admin/typography";
+@import "seller-admin/navigation";
+@import "seller-admin/top_navigation";
+@import "seller-admin/buttons";
+@import "seller-admin/badgets_labels";
+@import "seller-admin/elements";
+@import "seller-admin/sidebar";
+@import "seller-admin/base";
+@import "seller-admin/pages";
+@import "seller-admin/chat";
+@import "seller-admin/spinners";
+
+// RTL Support
+@import "seller-admin/rtl";
+
+// For demo only - config box style
+@import "seller-admin/theme-config";
+
+// INSPINIA Skins
+@import "seller-admin/skins";
+
+// Media query style
+@import "seller-admin/media";
+
+// Custom style
+// Your custom style to override base style
+@import "seller-admin/custom";
+
+@import "seller-admin/teeshop-admin";
+
+
