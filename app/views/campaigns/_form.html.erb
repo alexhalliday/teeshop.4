@@ -1,12 +1,23 @@
+<% if @campaign.errors.any? %>
+  <div class="alert alert-danger">
+    The form contains <%= pluralize(@campaign.errors.count, "error") %>:
+    <ul>
+    <% @campaign.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for @campaign, :html => { :class => 'form-horizontal form-model' } do |f| %>
   <div class="form-group">
-    <%= f.label :teespring_campaign_id, :class => 'control-label col-md-2' %>
+    <%= f.label :teespring_campaign_id, :class => 'control-label col-md-2' %>*
     <div class="col-md-10">
       <%= f.number_field :teespring_campaign_id, :class => 'text-field form-control' %>
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :description, :class => 'control-label col-md-2' %>
+    <%= f.label :description, :class => 'control-label col-md-2' %>*
     <div class="col-md-10">
       <%= f.text_area :description, :class => 'text-field form-control' %>
     </div>
@@ -26,3 +37,5 @@
     </div>
   </div>
 <% end %>
+
+<br/><br/><br/><br/>
